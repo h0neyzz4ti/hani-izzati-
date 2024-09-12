@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Health Awareness</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="health_info.html">Health Info</a>
+            <a href="bmi_calculator.html" class="active">BMI Calculator</a>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <h2>BMI Calculator</h2>
+            <p>Body Mass Index (BMI) is a simple method to estimate your body fat based on your weight and height. It’s widely used as a general health indicator and helps to categorize individuals into different weight status groups.</p>
+            
+            <!-- BMI Categories -->
+            <h3>BMI Categories</h3>
+            <ul>
+                <li><strong>Underweight:</strong> BMI less than 18.5</li>
+                <li><strong>Normal weight:</strong> BMI between 18.5 and 24.9</li>
+                <li><strong>Overweight:</strong> BMI between 25 and 29.9</li>
+                <li><strong>Obesity:</strong> BMI of 30 or higher</li>
+            </ul>
+            
+            <p>Please note that while BMI is a useful tool, it does not account for muscle mass, bone density, and other factors, so it’s always a good idea to consult with a healthcare professional for a comprehensive assessment of your health.</p>
+
+            <!-- Gender Selection -->
+            <label for="gender">Gender:</label>
+            <div>
+                <label for="male">
+                    <input type="radio" id="male" name="gender" value="Male" checked>
+                    Male
+                </label>
+                <label for="female">
+                    <input type="radio" id="female" name="gender" value="Female">
+                    Female
+                </label>
+            </div>
+
+            <!-- BMI Calculator Form -->
+            <div class="bmi-calculator">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" placeholder="Enter your weight">
+
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" placeholder="Enter your height">
+                
+                <button onclick="calculateBMI()">Calculate BMI</button>
+                <p id="result"></p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
